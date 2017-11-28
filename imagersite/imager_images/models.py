@@ -37,6 +37,6 @@ class Photo(ImageBaseClass):
 class Album(ImageBaseClass):
     """Album model."""
 
-    photo = models.ManyToManyField(Photo, related_name='album')
+    photos = models.ManyToManyField(Photo, related_name='albums')
     cover = models.ImageField(upload_to='images')
     date_created = models.DateField(editable=False, auto_now_add=True)
